@@ -37,7 +37,7 @@ public class MattermostAppender extends UnsynchronizedAppenderBase<ILoggingEvent
 
     private static final HttpClient httpClient = HttpClient.newBuilder()
             .version(HttpClient.Version.HTTP_2)
-            .connectTimeout(Duration.ofMillis(10000))
+            .connectTimeout(Duration.ofSeconds(10))
             .build();
     private static final Layout<ILoggingEvent> defaultLayout = new LayoutBase<>() {
         public String doLayout(ILoggingEvent event) {
