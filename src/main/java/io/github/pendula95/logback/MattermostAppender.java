@@ -13,7 +13,7 @@
  *    limitations under the License.
  */
 
-package com.github.pendula95.logback;
+package io.github.pendula95.logback;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.spi.ILoggingEvent;

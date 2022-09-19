@@ -7,7 +7,7 @@
     <description>Logback appender for sending messages to Mattermost server</description>
     <url>https://github.com/pendula95/logback-mattermost-appender</url>
 
-    <groupId>com.github.pendula95</groupId>
+    <groupId>io.github.pendula95</groupId>
     <artifactId>logback-mattermost-appender</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
