@@ -54,5 +54,5 @@ jobs:
         MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
         
     - name: Rollback
-      if: ${failure()}
+      if: failure()
       run: mvn release:rollback -B
