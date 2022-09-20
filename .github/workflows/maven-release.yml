@@ -12,11 +12,6 @@ on:
         required: true
         type: string
         default: '-SNAPSHOT'
-      branch:
-        description: 'Branch'
-        required: true
-        type: string
-        default: 'master'
 
 jobs:
   build:
@@ -32,7 +27,7 @@ jobs:
         server-id: ossrh-releases-pendula95 # Value of the distributionManagement/repository/id field of the pom.xml
         server-username: MAVEN_CENTRAL_USERNAME # env variable for username in deploy
         server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
-        gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+        gpg-private-key: MAVEN_GPG_PRIVATE_KEY #env variable for GPG private key
         gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
     
     - name: Configure git user
@@ -42,7 +37,7 @@ jobs:
       
     - name: Release
       id: releas
-      run:  mvn -B release:prepare release:perform -Dresume=false -DskipTests=true -Dtag=$RELEASE_VERSION -DreleaseVersion=$RELEASE_VERSION -DdevelopmentVersion=$DEVELOPEMENT_VERSION -DcompletionGoals=install -DfailOnDeprecation=false -Darguments="-Dmaven.site.skip=true -Dmaven.site.deploy.skip=true -Dmaven.javadoc.skip=true"
+      run:  mvn -B release:prepare release:perform -Dresume=false -DskipTests=true -Dtag=$RELEASE_VERSION -DreleaseVersion=$RELEASE_VERSION -DdevelopmentVersion=$DEVELOPEMENT_VERSION -DcompletionGoals=install -DfailOnDeprecation=false -Darguments="-Dmaven.site.skip=true -Dmaven.site.deploy.skip=true"
       env:
         GITHUB_TOKEN: ${{ github.token }} # GITHUB_TOKEN is the default env for the password
         RELEASE_VERSION: ${{ inputs.releaseVersion }}
@@ -50,6 +45,7 @@ jobs:
         MAVEN_CENTRAL_TOKEN: ${{ secrets.OSSRH_TOKEN }}
         MAVEN_CENTRAL_USERNAME: ${{ secrets.OSSRH_USERNAME }}
         MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+        MAVEN_GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
         
     - name: Rollback
       if: failure()
