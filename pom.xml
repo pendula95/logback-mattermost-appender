@@ -8,7 +8,7 @@
 
     <groupId>io.github.pendula95</groupId>
     <artifactId>logback-mattermost-appender</artifactId>
-    <version>1.0.0</version>
+    <version>1.2.0-SNAPSHOT</version>
 
     <licenses>
         <license>
@@ -22,7 +22,7 @@
         <developerConnection>scm:git:https://github.com/pendula95/logback-mattermost-appender.git</developerConnection>
         <connection>scm:git:https://github.com/pendula95/logback-mattermost-appender.git</connection>
         <url>https://github.com/pendula95/logback-mattermost-appender</url>
-        <tag>1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
