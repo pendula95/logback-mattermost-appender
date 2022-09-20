@@ -20,8 +20,8 @@
     </licenses>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/pendula95/logback-mattermost-appender.git</developerConnection>
-        <connection>scm:git:https://github.com/pendula95/logback-mattermost-appender.git</connection>
+        <developerConnection>scm:git:ssh://github.com/pendula95/logback-mattermost-appender.git</developerConnection>
+        <connection>scm:git:git@github.com/pendula95/logback-mattermost-appender.git</connection>
         <url>https://github.com/pendula95/logback-mattermost-appender</url>
         <tag>HEAD</tag>
     </scm>
