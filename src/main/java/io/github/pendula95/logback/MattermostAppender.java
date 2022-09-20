@@ -170,7 +170,7 @@ public class MattermostAppender extends UnsynchronizedAppenderBase<ILoggingEvent
         ObjectNode attachment = objectMapper.createObjectNode();
         attachment.put("title", evt.getLevel().toString());
         attachment.put("text", text);
-        if (colorCoding) {
+        if (colorCoding && colorByEvent(evt) != null) {
             attachment.put("color", colorByEvent(evt));
         }
         return attachment;
@@ -200,7 +200,7 @@ public class MattermostAppender extends UnsynchronizedAppenderBase<ILoggingEvent
             return "good";
         }
 
-        return "";
+        return null;
     }
 
     public String getWebhook() {
