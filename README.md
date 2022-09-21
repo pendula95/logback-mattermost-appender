@@ -53,6 +53,11 @@ Bot integration Appender configuration:
 
         <!-- If color coding of log levels should be used -->
         <colorCoding>true</colorCoding>
+
+        <!-- Formatting (you can use Mattermost formatting - URL links, code formatting, etc.) -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>**${HOSTNAME} %date{"yyyy-MM-dd'T'HH:mm:ssXXX"} %logger{128}** %n%msg%n</pattern>
+        </layout>
     </appender>
 </configuration>
 ```
@@ -83,6 +88,11 @@ Webhook integration example:
         
         <!-- If color coding of log levels should be used -->
         <colorCoding>true</colorCoding>
+
+        <!-- Formatting (you can use Mattermost formatting - URL links, code formatting, etc.) -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>**${HOSTNAME} %date{"yyyy-MM-dd'T'HH:mm:ssXXX"} %logger{128}** %n%msg%n</pattern>
+        </layout>
     </appender>
 </configuration>
 ```
