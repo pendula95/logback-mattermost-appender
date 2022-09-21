@@ -37,7 +37,7 @@ jobs:
       
     - name: Release
       id: releas
-      run:  mvn -B release:prepare release:perform -Dresume=false -DskipTests=true -Dtag=$RELEASE_VERSION -DreleaseVersion=$RELEASE_VERSION -DdevelopmentVersion=$DEVELOPEMENT_VERSION -DpreparationGoals=validate -DcompletionGoals=install -DfailOnDeprecation=false -Darguments="-Dmaven.site.skip=true -Dmaven.site.deploy.skip=true"
+      run:  mvn -B release:prepare release:perform -Dresume=false -DskipTests=true -Dtag=$RELEASE_VERSION -DreleaseVersion=$RELEASE_VERSION -DdevelopmentVersion=$DEVELOPEMENT_VERSION -DcompletionGoals="install pgp:sign" -DfailOnDeprecation=false -Darguments="-Dmaven.site.skip=true -Dmaven.site.deploy.skip=true"
       env:
         GITHUB_TOKEN: ${{ github.token }} # GITHUB_TOKEN is the default env for the password
         RELEASE_VERSION: ${{ inputs.releaseVersion }}
