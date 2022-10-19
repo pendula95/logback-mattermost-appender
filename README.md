@@ -14,7 +14,7 @@ Binaries/Download
 ----------------
 Binaries and dependency information for Maven, Ivy, Gradle and others can be found at http://search.maven.org.
 
-Releases of lettuce are available in the Maven Central repository.
+Releases of LMA are available in the Maven Central repository.
 
 Example for Maven:
 
