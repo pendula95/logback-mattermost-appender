@@ -39,7 +39,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
-        <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
+        <maven.release.plugin.version>3.0.0</maven.release.plugin.version>
         <maven.gpg.plugin.version>3.0.1</maven.gpg.plugin.version>
         <maven.source.plugin>3.2.1</maven.source.plugin>
         <maven.javadoc.plugin>3.5.0</maven.javadoc.plugin>
