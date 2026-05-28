@@ -38,12 +38,12 @@
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.plugin.version>3.14.1</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>3.15.0</maven.compiler.plugin.version>
         <maven.release.plugin.version>3.3.1</maven.release.plugin.version>
         <maven.gpg.plugin.version>3.2.8</maven.gpg.plugin.version>
         <maven.source.plugin>3.4.0</maven.source.plugin>
         <maven.javadoc.plugin>3.11.2</maven.javadoc.plugin>
-        <logback.version>1.5.23</logback.version>
+        <logback.version>1.5.32</logback.version>
         <jackson.databind.version>2.21.2</jackson.databind.version>
     </properties>
 
